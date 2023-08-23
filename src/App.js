@@ -1,21 +1,18 @@
 import "./App.css";
-
-function Person(props) {
-  return (
-    <>
-      <h1>Nome: {props.nome}</h1>
-      <h1>Sobrenome: {props.sobrenome} </h1>
-      <h1>Idade: {props.idade} </h1>
-    </>
-  );
-}
+import { useState } from "react";
 
 function App() {
+  const [counter, setCounter] = useState(8);
+
   return (
     <div className="App">
-      aaaaa
-      <Person nome="Jocy" sobrenome="Neto" idade="18" />
-      <Person nome="Eduardo" sobrenome="Noe" idade="30" />
+      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>
+        -
+      </button>
+      <h1> {counter} </h1>
+      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>
+        +
+      </button>
     </div>
   );
 }
