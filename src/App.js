@@ -1,22 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const name = "";
+
   return (
     <div className="App">
-      {" "}
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>VASCO DA GAMA!!!!!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React.
-        </a>
-      </header>
+      {name ? (
+        <>
+          <h1>{name}</h1>
+        </>
+      ) : (
+        <>
+          <h1>VASCO DA GAMA</h1>
+          <h2>Nome vazio.</h2>
+        </>
+      )}
     </div>
   );
 }
